@@ -1,0 +1,21 @@
+.educations-content {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+  gap: 3rem;
+  align-items: center;
+  text-align: center;
+  @include container;
+  //Card
+  .educations-card {
+  
+    //Image
+    &-image {
+        width: 100%;
+        height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

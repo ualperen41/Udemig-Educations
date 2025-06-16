@@ -1,0 +1,40 @@
+//Mixin
+@mixin button {
+    padding: 13px 40px;
+    display: inline-block;
+    background-color: $main-color;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    @extend .transition;
+    &:hover {
+        border: 2px solid white;
+        background-color: transparent;
+        color: $text-color;
+        transform: translateX(10px);
+    }
+}
+
+
+
+
+//Breakpoints
+@mixin laptop {
+    @media (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin mini-tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
