@@ -1,0 +1,63 @@
+#popular-courses {
+    @include container;
+    .center {
+        text-align: center;
+        // Title
+        h2 {
+            font-size: $h2-font;
+            font-weight: 800;
+        }
+
+        button {
+            @include button;
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 5rem;
+        gap: 3rem;
+
+        //Card
+        .card {
+            position: relative;
+
+            // Card'a hover olduğunda resme hover efekti ver
+            &:hover img {
+                scale: 1.05;
+            }
+            // Image
+            img {
+                width: 100%;
+                height: 300px;
+                border-radius: 10px;
+                filter: brightness(70%);
+                cursor: pointer;
+                @extend .transition;
+            }
+
+            // Info
+            .info {
+                position: absolute;
+                left: 25px;
+                bottom: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h4 {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 17px;
+
+                    i{
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+
+    }
+}

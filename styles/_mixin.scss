@@ -16,7 +16,9 @@
         transform: translateX(10px);
     }
 }
-
+@mixin container {
+    padding: 70px 17% 60px;
+}
 
 
 
